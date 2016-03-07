@@ -1,0 +1,454 @@
+fileFormatVersion: 2
+guid: 96b9f81cf390f461bbcf6927fe20697a
+timeCreated: 1456216411
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: TopBar
+    21300002: NightTime
+    21300004: Quest
+    21300006: Main_part_3
+    21300008: Cancel
+    21300010: Setting
+    21300012: MoneyIncator
+    21300014: DayTime
+    21300016: BgEXP
+    21300018: SmithHW
+    21300020: Calendar
+    21300022: ValueExp
+    21300024: TimeBar
+    21300026: GoResource
+    21300028: QuestBadge
+    21300030: BottomBar
+    21300032: Main_part_15
+    21300034: Main_part_17
+    21300036: Main_part_18
+    21300038: GoShop
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: TopBar
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 1280
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -640, y: 37}
+        - {x: -640, y: -37}
+        - {x: 640, y: -37}
+        - {x: 640, y: 37}
+    - name: NightTime
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 577
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: 25}
+        - {x: -17.5, y: -25}
+        - {x: 9.5, y: -25}
+        - {x: 17.5, y: -14}
+        - {x: 17.5, y: 15}
+        - {x: 7.5, y: 25}
+    - name: Quest
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 517
+        width: 124
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 56}
+        - {x: -62, y: 41}
+        - {x: -62, y: -33}
+        - {x: -29, y: -56}
+        - {x: 31, y: -56}
+        - {x: 62, y: -17}
+        - {x: 62, y: 56}
+    - name: Main_part_3
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 52
+        width: 473
+        height: 588
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -236.5, y: 294}
+        - {x: -236.5, y: -294}
+        - {x: 236.5, y: -294}
+        - {x: 236.5, y: 294}
+    - name: Cancel
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 582
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 28}
+        - {x: -29, y: 20}
+        - {x: -29, y: -24}
+        - {x: -21, y: -28}
+        - {x: 18, y: -28}
+        - {x: 29, y: -17}
+        - {x: 29, y: 23}
+        - {x: 28, y: 28}
+    - name: Setting
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 579
+        width: 73
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 31}
+        - {x: -36.5, y: 26}
+        - {x: -36.5, y: -27}
+        - {x: -29.5, y: -31}
+        - {x: 32.5, y: -31}
+        - {x: 36.5, y: -23}
+        - {x: 36.5, y: 22}
+        - {x: 26.5, y: 31}
+    - name: MoneyIncator
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 585
+        width: 259
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -129.5, y: 23.5}
+        - {x: -129.5, y: -20.5}
+        - {x: -127.5, y: -23.5}
+        - {x: 129.5, y: -23.5}
+        - {x: 129.5, y: 23.5}
+    - name: DayTime
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 520
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 26.5}
+        - {x: -24, y: 22.5}
+        - {x: -25, y: 18.5}
+        - {x: -25, y: -17.5}
+        - {x: -10, y: -26.5}
+        - {x: 13, y: -26.5}
+        - {x: 25, y: -17.5}
+        - {x: 25, y: 19.5}
+        - {x: 10, y: 26.5}
+    - name: BgEXP
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 512
+        width: 406
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -203, y: 22.5}
+        - {x: -203, y: -15.5}
+        - {x: -197, y: -22.5}
+        - {x: 203, y: -22.5}
+        - {x: 203, y: 22.5}
+    - name: SmithHW
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 295
+        width: 197
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: 99.5}
+        - {x: -34.5, y: 99.5}
+        - {x: -65.5, y: 91.5}
+        - {x: -98.5, y: 29.5}
+        - {x: -98.5, y: -58.5}
+        - {x: -67.5, y: -98.5}
+        - {x: 53.5, y: -98.5}
+        - {x: 58.5, y: -97.5}
+        - {x: 98.5, y: -12.5}
+        - {x: 98.5, y: 13.5}
+        - {x: 22.5, y: 86.5}
+    - name: Calendar
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 386
+        width: 134
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 60}
+        - {x: -67, y: -29}
+        - {x: -67, y: -56}
+        - {x: -37, y: -60}
+        - {x: 67, y: -60}
+        - {x: 67, y: 60}
+    - name: ValueExp
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 460
+        width: 400
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -191, y: 22}
+        - {x: -200, y: 13}
+        - {x: -200, y: -12}
+        - {x: -192, y: -22}
+        - {x: 194, y: -22}
+        - {x: 200, y: -18}
+        - {x: 200, y: 14}
+        - {x: 197, y: 22}
+    - name: TimeBar
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 401
+        width: 209
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -104.5, y: 22.5}
+        - {x: -104.5, y: -16.5}
+        - {x: -97.5, y: -22.5}
+        - {x: 104.5, y: -22.5}
+        - {x: 104.5, y: 22.5}
+    - name: GoResource
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 62
+        width: 151
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75.5, y: 71.5}
+        - {x: -75.5, y: -71.5}
+        - {x: -50.5, y: -71.5}
+        - {x: 0.5, y: -62.5}
+        - {x: 75.5, y: -16.5}
+        - {x: 75.5, y: 31.5}
+        - {x: -22.5, y: 71.5}
+    - name: QuestBadge
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 57
+        width: 124
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 74.5}
+        - {x: -62, y: 60.5}
+        - {x: -62, y: -30.5}
+        - {x: -42, y: -74.5}
+        - {x: 47, y: -74.5}
+        - {x: 60, y: -69.5}
+        - {x: 60, y: 51.5}
+        - {x: 43, y: 74.5}
+    - name: BottomBar
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1280
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -640, y: 24}
+        - {x: -640, y: -24}
+        - {x: 640, y: -24}
+        - {x: 640, y: 24}
+    - name: Main_part_15
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 215
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: -18}
+        - {x: -4.5, y: -20}
+        - {x: -4.5, y: -23}
+        - {x: -3.5, y: -24}
+        - {x: 1.5, y: -24}
+        - {x: 1.5, y: -20}
+        - {x: -1.5, y: -18}
+      - - {x: -0.5, y: 25}
+        - {x: -17.5, y: 7}
+        - {x: -18.5, y: 6}
+        - {x: -18.5, y: 0}
+        - {x: -5.5, y: -19}
+        - {x: 7.5, y: -24}
+        - {x: 16.5, y: -24}
+        - {x: 17.5, y: -20}
+        - {x: 17.5, y: 25}
+    - name: Main_part_17
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 215
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: -18}
+        - {x: -4.5, y: -20}
+        - {x: -4.5, y: -23}
+        - {x: -3.5, y: -24}
+        - {x: 1.5, y: -24}
+        - {x: 1.5, y: -20}
+        - {x: -1.5, y: -18}
+      - - {x: -0.5, y: 25}
+        - {x: -17.5, y: 7}
+        - {x: -18.5, y: 6}
+        - {x: -18.5, y: 0}
+        - {x: -5.5, y: -19}
+        - {x: 7.5, y: -24}
+        - {x: 16.5, y: -24}
+        - {x: 17.5, y: -20}
+        - {x: 17.5, y: 25}
+    - name: Main_part_18
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 214
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: 25.5}
+        - {x: -17.5, y: -4.5}
+        - {x: -16.5, y: -24.5}
+        - {x: 5.5, y: -24.5}
+        - {x: 17.5, y: -0.5}
+        - {x: 17.5, y: 14.5}
+        - {x: 2.5, y: 25.5}
+      - - {x: -2.5, y: -21.5}
+        - {x: -1.5, y: -24.5}
+        - {x: 2.5, y: -24.5}
+        - {x: 4.5, y: -22.5}
+        - {x: 4.5, y: -20.5}
+        - {x: 2.5, y: -18.5}
+    - name: GoShop
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 214
+        width: 133
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66.5, y: 26.5}
+        - {x: -66.5, y: -28.5}
+        - {x: 24.5, y: -71.5}
+        - {x: 66.5, y: -71.5}
+        - {x: 66.5, y: 71.5}
+        - {x: 44.5, y: 71.5}
+        - {x: -0.5, y: 60.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
