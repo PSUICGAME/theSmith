@@ -20,6 +20,26 @@ public class GameLevelManager : MonoBehaviour {
 		SceneManager.LoadScene("GameLevel1");
 	}
 
+	public void gotoForest()
+	{
+		SceneManager.LoadScene("ForestGame");
+	}
+
+	public void gotoCave()
+	{
+
+	}
+
+	public void gotoRiver()
+	{
+
+	}
+
+	public void gotoMoutain()
+	{
+
+	}
+
 	public Image dayTime;
 	public Image NightTime;
 	public Text timeTextUI;
