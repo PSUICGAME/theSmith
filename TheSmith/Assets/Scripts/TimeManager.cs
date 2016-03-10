@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Timemanger : MonoBehaviour {
+public class TimeManager : MonoBehaviour {
 
 	public static float timeValue; // Store Time value 
 	Text UITimeText; // Connect to TimeText UI
