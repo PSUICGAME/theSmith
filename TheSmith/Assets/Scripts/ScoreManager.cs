@@ -7,7 +7,8 @@ public class ScoreManager : MonoBehaviour {
 	public static int ScoreValue; // Store Time value 
 	Text UIScoreText; // Connect to TimeText UI
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 
 		ScoreValue = 0;
 		UIScoreText = gameObject.GetComponent<Text>();
@@ -15,8 +16,8 @@ public class ScoreManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		UIScoreText.text = "Score: "+ ScoreValue;
-	
 	}
 }

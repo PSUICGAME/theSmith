@@ -24,25 +24,17 @@ public class ForestGamePlayManager : MonoBehaviour {
 			spawnTreePosition[RandomTreeIndex].transform.position
 			, Quaternion.identity) as GameObject;
 			cloneTree.name = "tree"+RandomTreeIndex;
-			//treeNumber++;
-			//randomCount++;
 		}
-		//print( cloneTree.name);
-
-		//Destroy(cloneTree,3.0f);
 		
 	}
 	// Use this for initialization
-	void Start () {
-
-		InvokeRepeating("spawnTree",2.0f,1.0f);
+	void Start () 
+	{
+		InvokeRepeating("spawnTree",2.0f,2.0f);
 		panelResult.SetActive(false);
-
-
-
 	}
 
-	float timeTemp = 10;
+	float timeTemp = 30;
 	// Update is called once per frame
 	void Update () {
 
@@ -52,10 +44,8 @@ public class ForestGamePlayManager : MonoBehaviour {
 
 		if(TimeManager.timeValue < 1)
 		{
-			//SceneManager.LoadScene("Adventure");
 			panelResult.SetActive(true);
 			Time.timeScale = 0;
-
 		}
 	
 	}
