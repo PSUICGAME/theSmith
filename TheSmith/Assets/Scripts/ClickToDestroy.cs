@@ -28,7 +28,6 @@ public class ClickToDestroy : MonoBehaviour {
 			subIndex = gameObject.name;
 
 			TreeIndex = int.Parse(subIndex.Substring(4) );
-			print (TreeIndex);
 			ForestGamePlayManager.checkTree[TreeIndex] = false;
 			Destroy(gameObject);
 		}
