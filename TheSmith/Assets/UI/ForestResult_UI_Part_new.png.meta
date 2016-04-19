@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: 1fe6060b0037b4b82b825d132f6ac9a1
-timeCreated: 1459839573
+timeCreated: 1460950225
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ForestResult_UI_Part_new_0
+    21300002: ForestResult_UI_Part_new_1
+    21300004: ForestResult_UI_Part_new_2
+    21300006: ForestResult_UI_Part_new_3
+    21300008: ForestResult_UI_Part_new_4
+    21300010: ForestResult_UI_Part_new_5
+    21300012: ForestResult_UI_Part_new_6
+    21300014: ForestResult_UI_Part_new_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,26 +38,175 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ForestResult_UI_Part_new_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 617
+        width: 87
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 45}
+        - {x: -43.5, y: 29}
+        - {x: -43.5, y: -33}
+        - {x: -37.5, y: -45}
+        - {x: 40.5, y: -45}
+        - {x: 43.5, y: -33}
+        - {x: 43.5, y: 24}
+        - {x: 27.5, y: 45}
+    - name: ForestResult_UI_Part_new_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 50
+        width: 549
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -274.5, y: 321}
+        - {x: -274.5, y: -321}
+        - {x: 274.5, y: -321}
+        - {x: 274.5, y: 321}
+    - name: ForestResult_UI_Part_new_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 521
+        width: 87
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 45}
+        - {x: -43.5, y: 29}
+        - {x: -43.5, y: -33}
+        - {x: -37.5, y: -45}
+        - {x: 40.5, y: -45}
+        - {x: 43.5, y: -33}
+        - {x: 43.5, y: 24}
+        - {x: 27.5, y: 45}
+    - name: ForestResult_UI_Part_new_3
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 525
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 42.5}
+        - {x: -27, y: 42.5}
+        - {x: -43, y: 37.5}
+        - {x: -43, y: -33.5}
+        - {x: -29, y: -42.5}
+        - {x: 30, y: -42.5}
+        - {x: 34, y: -41.5}
+        - {x: 43, y: -27.5}
+        - {x: 43, y: 21.5}
+        - {x: 41, y: 30.5}
+    - name: ForestResult_UI_Part_new_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 363
+        width: 383
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 177.5, y: 42}
+        - {x: -178.5, y: 42}
+        - {x: -191.5, y: 28}
+        - {x: -191.5, y: -25}
+        - {x: -178.5, y: -41}
+        - {x: -175.5, y: -42}
+        - {x: 172.5, y: -42}
+        - {x: 177.5, y: -41}
+        - {x: 191.5, y: -27}
+        - {x: 191.5, y: 27}
+    - name: ForestResult_UI_Part_new_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 262
+        width: 86
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 35.5}
+        - {x: -43, y: -34.5}
+        - {x: -41, y: -35.5}
+        - {x: 43, y: -35.5}
+        - {x: 43, y: 35.5}
+    - name: ForestResult_UI_Part_new_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 186
+        width: 174
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -82, y: 22.5}
+        - {x: -87, y: 19.5}
+        - {x: -87, y: -17.5}
+        - {x: -83, y: -22.5}
+        - {x: 82, y: -22.5}
+        - {x: 87, y: -18.5}
+        - {x: 87, y: 16.5}
+        - {x: 85, y: 22.5}
+    - name: ForestResult_UI_Part_new_7
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 188
+        width: 174
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -82, y: 22.5}
+        - {x: -87, y: 19.5}
+        - {x: -87, y: -17.5}
+        - {x: -83, y: -22.5}
+        - {x: 82, y: -22.5}
+        - {x: 87, y: -18.5}
+        - {x: 87, y: 16.5}
+        - {x: 85, y: 22.5}
     outline: []
   spritePackingTag: 
   userData: 
