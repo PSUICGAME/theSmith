@@ -21,7 +21,7 @@ public class ClickToDestroy : MonoBehaviour {
 	void OnMouseDown()
 	{
 		mouseDownCount++;
-
+		genEffect();
 		if ( mouseDownCount > 2)
 		{
 			ScoreManager.ScoreValue = ScoreManager.ScoreValue + (int)(treeLifeTime * 100);
@@ -31,6 +31,16 @@ public class ClickToDestroy : MonoBehaviour {
 			ForestGamePlayManager.checkTree[TreeIndex] = false;
 			Destroy(gameObject);
 		}
+
+	}
+
+	public GameObject effect1;
+	void genEffect()
+	{
+		GameObject CloneEffect = Instantiate( effect1,
+			transform.position,
+			Quaternion.identity) as GameObject;
+		Destroy(CloneEffect,0.9f);
 	}
 
 }

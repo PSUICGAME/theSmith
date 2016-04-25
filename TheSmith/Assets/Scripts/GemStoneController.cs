@@ -61,7 +61,7 @@ public class GemStoneController : MonoBehaviour {
 		if( hitObject.gameObject.tag == "ItemBox" )
 			{
 			speedx = 0;	
-			ScoreManager.ScoreValue -= 150;
+			ScoreManager.ScoreValue += 150;
 			//Debug.Log("Hixxxxxxx");
 			}
 	}

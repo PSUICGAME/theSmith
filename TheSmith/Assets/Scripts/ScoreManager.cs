@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour {
 	void Start () 
 	{
 
-		ScoreValue = 0;
+		//ScoreValue = 0;
 		UIScoreText = gameObject.GetComponent<Text>();
 	
 	}

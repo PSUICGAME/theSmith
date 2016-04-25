@@ -7,7 +7,7 @@ public class ResourceManager : MonoBehaviour {
 
 	public static int ResourceValue; // Store Time value 
 	Text UIResourceText; // Connect to TimeText UI
-	int timberValue;
+	int timberValue,stoneValue,waterValue,mineralValue;
 	Scene myScene;
 	// Use this for initialization
 	void Start () 
@@ -15,51 +15,60 @@ public class ResourceManager : MonoBehaviour {
 		myScene = SceneManager.GetActiveScene();
 		ResourceValue = 0;
 		UIResourceText = gameObject.GetComponent<Text>();
+
+		if (myScene.name == "MoutainGame")
+		{
+			//Debug.Log("MMM");
+			UIResourceText.text = "x "+ calculateStone();
+		}
+		else if (myScene.name == "ForestGame")
+		{
+			UIResourceText.text = "x "+ calculateTimber();
+		}
+		else if (myScene.name == "RiverGame")
+		{
+			UIResourceText.text = "x "+ calculateWater();
+		}
+		else if (myScene.name == "CaveGame")
+		{
+			UIResourceText.text = "x "+ calculateMineral();
+		}
 	
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
-		if (myScene.name == "MoutainGame")
-		{
-			Debug.Log("MMM");
-			UIResourceText.text = "x "+ calculateStone();
-		}
-		else if (myScene.name == "ForrestGame")
-		{
-			UIResourceText.text = "x "+ calculateTimber();
-		}
+
 	}
 
 	int calculateStone()
 	{
+		Debug.Log(ScoreManager.ScoreValue);
 		if( ScoreManager.ScoreValue >= 6000)
 		{
-			// get 1 stone
 			PlayerPrefs.SetInt("mStone",2); 
-			return 2;
+			stoneValue = 2;
 		}
 		else if( ScoreManager.ScoreValue >= 4500)
 		{
-			// get 2 stones
 			PlayerPrefs.SetInt("mStone",1);
-			return 1;
+			stoneValue = 1;
 		}
 		else
 		{
-			return 0;
+			stoneValue = 0;
 		}
-		return 0;
+		return stoneValue;
 	}
 
 	int calculateTimber()
 	{
-
+		Debug.Log(ScoreManager.ScoreValue);
 		if( ScoreManager.ScoreValue < 6000)
 		{
 			
-			timberValue = (int)Random.Range(0,2);
+			timberValue = 10;//(int)Random.Range(0,2);
 
 		}
 		else if(ScoreManager.ScoreValue < 11000)
@@ -75,7 +84,57 @@ public class ResourceManager : MonoBehaviour {
 		
 		}
 		return timberValue;
-		//Debug.Log( "Star = "+starValue+" Timber = "+ timberValue+" Money = "+ MoneyValue);
+
+	}
+
+	int calculateWater()
+	{
+
+		if( ScoreManager.ScoreValue < 6000)
+		{
+
+			waterValue = (int)Random.Range(0,2);
+
+		}
+		else if(ScoreManager.ScoreValue < 11000)
+		{
+
+			waterValue = Random.Range(1,3);
+
+		}
+		else
+		{
+
+			waterValue = Random.Range(2,3);
+
+		}
+		return waterValue;
+
+	}
+
+	int calculateMineral()
+	{
+		Debug.Log(ScoreManager.ScoreValue);
+		if( ScoreManager.ScoreValue < 2000)
+		{
+
+			mineralValue = (int)Random.Range(0,2);
+
+		}
+		else if(ScoreManager.ScoreValue < 3500)
+		{
+
+			mineralValue = Random.Range(1,3);
+
+		}
+		else
+		{
+
+			mineralValue = Random.Range(2,3);
+
+		}
+		return mineralValue;
+
 	}
 
 }
