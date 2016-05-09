@@ -1,63 +1,167 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+public class GameResultManager : MonoBehaviour 
 
-public class GameResultManager : MonoBehaviour {
+{
+	static int stage;
+	static int dif;
+	static int starValueEasy,starValueNormal,starValueHard;
+	public Image star1, star2, star3;
+	public Sprite conStar,emptyStar;
+	public AudioSource audioSource;
 
-	// Use this for initialization
-	//public Text TextTimberUI;
-	//public Text TextMoneyUI;
-	public Image star1,star2,star3;
-	public Sprite StarImageOn;
-	public Sprite StarImageOff;
-	void Start () {
-		//TextTimberUI =  ;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		//TextTimberUI.text = "This is "+starValue;
-		if( TimeManager.timeValue == 1)
-		{
-			calculateStar();
-			//TextTimberUI.text = "x "+timberValue;
-			//TextMoneyUI.text ="This is "+MoneyValue;
-		}
-	}
-
-	public int starValue;
-	public int timberValue;
-	public int MoneyValue;
-	public void calculateStar()
+	public void Retry()
 	{
-
-		if( ScoreManager.ScoreValue < 6000)
-		{
-			star1.sprite = StarImageOn;
-			starValue = 1;
-			//timberValue = (int)Random.Range(0,2);
-			//MoneyValue = (int)Random.Range(0,101);
-		}
-		else if(ScoreManager.ScoreValue < 11000)
-		{
-			star1.sprite = StarImageOn;
-			star2.sprite = StarImageOn;
-			starValue = 2;
-			//timberValue = Random.Range(1,3);
-			//MoneyValue = (int)Random.Range(100,201);
-		}
-		else
-		{
-			star1.sprite = StarImageOn;
-			star2.sprite = StarImageOn;
-			star3.sprite = StarImageOn;
-			starValue = 3;
-			//timberValue = Random.Range(2,3);
-			//MoneyValue = (int)Random.Range(200,301);
-		}
-			
-		//Debug.Log( "Star = "+starValue+" Timber = "+ timberValue+" Money = "+ MoneyValue);
+		SceneManager.LoadScene ("RiverGame");
+	}
+	public void MainMenu()
+	{
+		SceneManager.LoadScene ("Adventure");
 	}
 
+	void Start()
+	{
+		dif = PlayerPrefs.GetInt ("Dif");
+		stage = PlayerPrefs.GetInt ("Stage");
+		audioSource.Stop ();
+	}
 
+	void Update()
+	{
+		if (stage == 1) {
+			if (dif == 0) {
+				if (ScoreManager.ScoreValue >= 4750) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+
+					starValueEasy = 3;
+					PlayerPrefs.SetInt ("starValueEasyCave", starValueEasy);
+				} else if (ScoreManager.ScoreValue >= 3750) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					starValueEasy = 2;
+					PlayerPrefs.SetInt ("starValueEasyCave", starValueEasy);
+				} else if (ScoreManager.ScoreValue >= 2750) {
+					star1.sprite = conStar;
+					starValueEasy = 1;
+					PlayerPrefs.SetInt ("starValueEasyCave", starValueEasy);
+				} else {
+					starValueEasy = 0;
+					PlayerPrefs.SetInt ("starValueEasyCave", starValueEasy);
+				}
+			} else if (dif == 1) {
+				if (ScoreManager.ScoreValue >= 3750) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+
+					starValueNormal = 3;
+					PlayerPrefs.SetInt ("starValueNormalCave", starValueNormal);
+				} else if (ScoreManager.ScoreValue >= 2750) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					starValueNormal = 2;
+					PlayerPrefs.SetInt ("starValueNormalCave", starValueNormal);
+				} else if (ScoreManager.ScoreValue >= 1750) {
+					star1.sprite = conStar;
+					starValueNormal = 1;
+					PlayerPrefs.SetInt ("starValueNormalCave", starValueNormal);
+				} else {
+					starValueNormal = 0;
+					PlayerPrefs.SetInt ("starValueNormalCave", starValueNormal);
+				}
+			} else {
+				if (ScoreManager.ScoreValue >= 2750) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+
+					starValueHard = 3;
+					PlayerPrefs.SetInt ("starValueHardCave", starValueHard);
+				} else if (ScoreManager.ScoreValue >= 1750) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					starValueHard = 2;
+					PlayerPrefs.SetInt ("starValueHardCave", starValueHard);
+				} else if (ScoreManager.ScoreValue >= 750) {
+					star1.sprite = conStar;
+					starValueHard = 1;
+					PlayerPrefs.SetInt ("starValueHardCave", starValueHard);
+				} else {
+					starValueHard = 0;
+					PlayerPrefs.SetInt ("starValueHardCave", starValueHard);
+				}
+			}
+		}
+
+		else if (stage == 2) {
+			if (dif == 0) {
+				if (ScoreManager.ScoreValue >= 7000) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+
+					starValueEasy = 3;
+					PlayerPrefs.SetInt ("starValueEasyRiver", starValueEasy);
+				} else if (ScoreManager.ScoreValue >= 6000) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					starValueEasy = 2;
+					PlayerPrefs.SetInt ("starValueEasyRiver", starValueEasy);
+				} else if (ScoreManager.ScoreValue >= 5000) {
+					star1.sprite = conStar;
+					starValueEasy = 1;
+					PlayerPrefs.SetInt ("starValueEasyRiver", starValueEasy);
+				} else {
+					starValueEasy = 0;
+					PlayerPrefs.SetInt ("starValueEasyRiver", starValueEasy);
+				}
+			} else if (dif == 1) {
+				if (ScoreManager.ScoreValue >= 6000) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+
+					starValueNormal = 3;
+					PlayerPrefs.SetInt ("starValueNormalRiver", starValueNormal);
+				} else if (ScoreManager.ScoreValue >= 5000) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					starValueNormal = 2;
+					PlayerPrefs.SetInt ("starValueNormalRiver", starValueNormal);
+				} else if (ScoreManager.ScoreValue >= 4000) {
+					star1.sprite = conStar;
+					starValueNormal = 1;
+					PlayerPrefs.SetInt ("starValueNormalRiver", starValueNormal);
+				} else {
+					starValueNormal = 0;
+					PlayerPrefs.SetInt ("starValueNormalRiver", starValueNormal);
+				}
+			} else {
+				if (ScoreManager.ScoreValue >= 5000) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+
+					starValueHard = 3;
+					PlayerPrefs.SetInt ("starValueHardRiver", starValueHard);
+				} else if (ScoreManager.ScoreValue >= 4000) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					starValueHard = 2;
+					PlayerPrefs.SetInt ("starValueHardRiver", starValueHard);
+				} else if (ScoreManager.ScoreValue >= 3000) {
+					star1.sprite = conStar;
+					starValueHard = 1;
+					PlayerPrefs.SetInt ("starValueHardRiver", starValueHard);
+				} else {
+					starValueHard = 0;
+					PlayerPrefs.SetInt ("starValueHardRiver", starValueHard);
+				}
+			}
+		}
+	}
 }

@@ -3,13 +3,27 @@ using System.Collections;
 
 public class RiverGamePlayManager : MonoBehaviour {
 
+	static int dif;
 	public GameObject[] WaterPrefabs;
 	public GameObject[] SpawnPointWater;
 	public GameObject panelResult;
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		dif = PlayerPrefs.GetInt ("Dif");
 		panelResult.SetActive(false);
-		InvokeRepeating("generateNote", 2.0f, 2.0f);
+		if (dif == 0) 
+		{
+			InvokeRepeating ("generateNote", 1.5f, 1.5f);
+		}
+		else if (dif == 1) 
+		{
+			InvokeRepeating ("generateNote", 2.0f, 2.0f);
+		}
+		else 
+		{
+			InvokeRepeating ("generateNote", 2.5f, 2.5f);
+		}
 	}
 
 	void generateNote()
@@ -19,13 +33,12 @@ public class RiverGamePlayManager : MonoBehaviour {
 		GameObject CloneNote = Instantiate( WaterPrefabs[waterIndex],
 			SpawnPointWater[SPwaterIndex].transform.position,
 			Quaternion.identity) as GameObject;
-		Destroy(CloneNote,20.0f);
 	}
 
 	float timeTemp = 40;
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
 		timeTemp = timeTemp - Time.deltaTime;
 		TimeManager.timeValue = (int)timeTemp;
 
@@ -34,6 +47,5 @@ public class RiverGamePlayManager : MonoBehaviour {
 			panelResult.SetActive(true);
 			Time.timeScale = 0;
 		}
-
 	}
 }

@@ -1,56 +1,57 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RiverClickToDestroy : MonoBehaviour {
+public class RiverClicktoDestroy : MonoBehaviour 
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	float noteLifeTime = 0;
-	float elapseTime=0;
-	void Update () {
-		noteLifeTime = noteLifeTime + Time.deltaTime;
-		if(transform.position.z > -13.9){elapseTime += Time.deltaTime; }
-	}
+{
+	public float speed;
+	static int dif;
 
+	void Start()
+	{
+		dif = PlayerPrefs.GetInt ("Dif");
+		if (dif == 0) 
+		{
+			speed = -8;
+		}
+		else if (dif == 1) 
+		{
+			speed = -11;
+		}
+		else 
+		{
+			speed = -14;
+		}
+	}
 	void OnMouseDown()
 	{
-
-
-		float timeCheck = noteLifeTime - elapseTime; 
-		//Destroy(gameObject);
-		if(transform.position.z > -14.0f    )
+		if (transform.position.z >= -15.25 || transform.position.z <= -17.5) 
 		{
-			
+			Destroy (gameObject);
+			ScoreManager.ScoreValue += 0;
+		} 
+		else if (transform.position.z >= -15.75 || transform.position.z <= -17)
+		{
+			Destroy (gameObject);
+			ScoreManager.ScoreValue += 125;
+		}
+		else if (transform.position.z >= -16.25 || transform.position.z <= -16.5)
+		{
+			Destroy (gameObject);
+			ScoreManager.ScoreValue += 250;
 		}
 		else
 		{
-			if( timeCheck < 0.35f) //Perfect
-			{ 
-				Debug.Log("Perfect"+(noteLifeTime - elapseTime));
-				ScoreManager.ScoreValue += 1000;
-			}
-			else if( timeCheck  < 0.45f) //Good
-			{ 
-				Debug.Log("Good"+(noteLifeTime - elapseTime));
-				ScoreManager.ScoreValue += 750;
-			}
-			else if( timeCheck < 0.55f) //Bad
-			{ 
-				Debug.Log("Bad"+(noteLifeTime - elapseTime));
-				ScoreManager.ScoreValue += 500;
-			}
-			else //Missed
-			{ 
-				Debug.Log("Missed"+noteLifeTime);
-			}
-			Destroy(gameObject);
+			Destroy (gameObject);
+			ScoreManager.ScoreValue += 500;
+		}	
+	}
+	void Update()
+	{
+		transform.Translate(0 , 0, Time.deltaTime * speed);
+		if (transform.position.z <= -19) 
+		{
+			Destroy (gameObject);
 		}
-
-
-
 	}
 }

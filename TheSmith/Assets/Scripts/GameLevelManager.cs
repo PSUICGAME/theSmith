@@ -3,8 +3,10 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameLevelManager : MonoBehaviour {
+public class GameLevelManager : MonoBehaviour 
 
+{
+	static int stage;
 	public void gotoShop()
 	{
 		SceneManager.LoadScene("Shop");
@@ -23,46 +25,28 @@ public class GameLevelManager : MonoBehaviour {
 	public void gotoForest()
 	{
 		SceneManager.LoadScene("ForestGame");
+		stage = 0;
+		PlayerPrefs.SetInt ("Stage", stage);
 	}
 
 	public void gotoCave()
 	{
-
+		SceneManager.LoadScene("CaveGame");
+		stage = 1;
+		PlayerPrefs.SetInt ("Stage", stage);
 	}
 
 	public void gotoRiver()
 	{
-
+		SceneManager.LoadScene("RiverGame");
+		stage = 2;
+		PlayerPrefs.SetInt ("Stage", stage);
 	}
 
 	public void gotoMoutain()
 	{
-
-	}
-
-	public Image dayTime;
-	public Image NightTime;
-	public Text timeTextUI;
-	public Slider expSliderUI;
-	int expValue;
-
-	void Update()
-	{
-		if( Input.GetKey(KeyCode.Space) )
-		{
-			dayTime.enabled = false;
-			NightTime.enabled = true;
-			expValue++;
-			expSliderUI.value = expValue; 
-		}
-		else
-		{
-			dayTime.enabled = true;
-			NightTime.enabled = false;
-			//expValue--;
-			//expSliderUI.value = expValue;
-		}
-
-		timeTextUI.text = Time.deltaTime.ToString();
+		SceneManager.LoadScene("MoutainGame");
+		stage = 3;
+		PlayerPrefs.SetInt ("Stage", stage);
 	}
 }

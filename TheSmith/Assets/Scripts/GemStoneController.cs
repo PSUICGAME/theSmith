@@ -1,19 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GemStoneController : MonoBehaviour {
+public class GemStoneController : MonoBehaviour 
 
-	// Use this for initialization
-	void Start () {
-		//randomSpeed();
-	}
+{
+
+	static int dif;
 
 	float speedx = 9.89f;
-	public void randomSpeed()
+
+	void Start()
 	{
-		speedx = Random.Range(5.0f,15.0f);
+		dif = PlayerPrefs.GetInt ("Dif");
+
+		if (dif == 0) 
+		{
+			speedx = 10f;
+		} 
+		else if (dif == 1) 
+		{
+
+			speedx = 20f;
+		} 
+		else 
+		{
+			speedx = 30f;
+		}
 	}
-	// Update is called once per frame
 	void Update () {
 
 		if(  !dragging )
@@ -29,7 +42,6 @@ public class GemStoneController : MonoBehaviour {
 		if(transform.position.x > 12.0)
 		{
 			Destroy(gameObject);
-			ScoreManager.ScoreValue -= 150;
 		}
 	}
 
@@ -40,29 +52,17 @@ public class GemStoneController : MonoBehaviour {
 	{
 		dragging = true;
 		distance = Vector3.Distance(transform.position, Camera.main.transform.position);
-		Debug.Log("Down");
 	}
 	void OnMouseUp()
 	{
 		dragging = false;
-		Debug.Log("Up");
 	}
-
-	/*
-	void OnTriggerEnter(Collider2D coll)
-	{
-		speedx = 0;
-	}
-	*/
-
 	void OnCollisionEnter2D(Collision2D hitObject)
 	{
-		Debug.Log("Hittttttttt");
 		if( hitObject.gameObject.tag == "ItemBox" )
 			{
 			speedx = 0;	
 			ScoreManager.ScoreValue += 150;
-			//Debug.Log("Hixxxxxxx");
 			}
 	}
 
