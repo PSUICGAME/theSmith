@@ -223,7 +223,7 @@ public class MinigameMenuManager : MonoBehaviour
 	{
 		menuMini.SetActive (false);
 		Time.timeScale = 1;
-		audioSource.Play ();
+		//audioSource.Play ();
 	}
 	public void NextDif()
 	{
@@ -251,4 +251,8 @@ public class MinigameMenuManager : MonoBehaviour
 	{
 		SceneManager.LoadScene ("Adventure");
 	}
+    public void Restart()
+    {
+        Application.LoadLevel(Application.loadedLevel); ;
+    }
 }

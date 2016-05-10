@@ -13,6 +13,5 @@ public class BoxController : MonoBehaviour {
 	void Update () 
 	{
 		transform.Translate(0,0, -Time.deltaTime * speed);
-	
 	}
 }

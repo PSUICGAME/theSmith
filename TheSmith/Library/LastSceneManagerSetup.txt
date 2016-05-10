@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/CaveGame.unity
+- path: Assets/Scenes/MoutainGame.unity
   isLoaded: 1
   isActive: 1
