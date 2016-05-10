@@ -1,10 +1,6 @@
 fileFormatVersion: 2
-guid: ffa097dbce2537a499f5ab65ef9d9d53
-<<<<<<< HEAD
-timeCreated: 1462859448
-=======
-timeCreated: 1462839297
->>>>>>> origin/the-smith-dev
+guid: 2b5c6136a8db2ea48a9a13844700ecc8
+timeCreated: 1462839251
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
