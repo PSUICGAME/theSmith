@@ -24,7 +24,104 @@ public class MinigameMenuManager : MonoBehaviour
 	}
 	void Update()
 	{
-		if (stage == 1) 
+		if (stage == 0) 
+		{
+			if (dif == 0) 
+			{
+				PlayerPrefs.SetInt ("Dif", dif);
+				difText.text = "Easy";
+				starValueEasy = PlayerPrefs.GetInt ("starValueEasyForest");
+				if (starValueEasyOld < starValueEasy) 
+				{
+					starValueEasyOld = starValueEasy;
+				}
+
+				if (starValueEasyOld == 1) 
+				{
+					star1.sprite = conStar;
+				}
+				else if (starValueEasyOld == 2) 
+				{
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+				}
+				else if (starValueEasyOld == 3) 
+				{
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+				}
+				else
+				{
+					star1.sprite = emptyStar;
+					star2.sprite = emptyStar;
+					star3.sprite = emptyStar;
+				}
+			} 
+			else if (dif == 1) 
+			{
+				PlayerPrefs.SetInt ("Dif", dif);
+				difText.text = "Normal";
+				starValueNormal = PlayerPrefs.GetInt ("starValueNormalForest");
+				if (starValueNormalOld < starValueEasy) 
+				{
+					starValueNormalOld = starValueNormal;
+				}
+				if (starValueNormalOld == 1) 
+				{
+					star1.sprite = conStar;
+				}
+				else if (starValueNormalOld == 2) 
+				{
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+				}
+				else if (starValueNormalOld == 3) 
+				{
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+				}
+				else
+				{
+					star1.sprite = emptyStar;
+					star2.sprite = emptyStar;
+					star3.sprite = emptyStar;
+				}	
+			} 
+			else 
+			{
+				PlayerPrefs.SetInt ("Dif", dif);
+				difText.text = "Hard";
+				starValueHard = PlayerPrefs.GetInt ("starValueHardForest");
+				if (starValueHardOld < starValueHard) 
+				{
+					starValueHardOld = starValueHard;
+				}
+				if (starValueHardOld == 1) 
+				{
+					star1.sprite = conStar;
+				}
+				else if (starValueHardOld == 2) 
+				{
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+				}
+				else if (starValueHardOld == 3) 
+				{
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+				}
+				else
+				{
+					star1.sprite = emptyStar;
+					star2.sprite = emptyStar;
+					star3.sprite = emptyStar;
+				}	
+			}
+		}
+		else if (stage == 1) 
 		{
 			if (dif == 0) 
 			{
@@ -223,7 +320,7 @@ public class MinigameMenuManager : MonoBehaviour
 	{
 		menuMini.SetActive (false);
 		Time.timeScale = 1;
-		audioSource.Play ();
+		//audioSource.Play ();
 	}
 	public void NextDif()
 	{
@@ -251,4 +348,8 @@ public class MinigameMenuManager : MonoBehaviour
 	{
 		SceneManager.LoadScene ("Adventure");
 	}
+    public void Restart()
+    {
+        Application.LoadLevel(Application.loadedLevel); ;
+    }
 }

@@ -6,9 +6,10 @@ public class RiverClicktoDestroy : MonoBehaviour
 {
 	public float speed;
 	static int dif;
-
+	AudioSource audioSource;
 	void Start()
 	{
+		audioSource = GameObject.FindGameObjectWithTag ("EditorOnly").GetComponent<AudioSource> ();
 		dif = PlayerPrefs.GetInt ("Dif");
 		if (dif == 0) 
 		{
@@ -27,21 +28,25 @@ public class RiverClicktoDestroy : MonoBehaviour
 	{
 		if (transform.position.z >= -15.25 || transform.position.z <= -17.5) 
 		{
+			audioSource.Play ();
 			Destroy (gameObject);
 			ScoreManager.ScoreValue += 0;
 		} 
 		else if (transform.position.z >= -15.75 || transform.position.z <= -17)
 		{
+			audioSource.Play ();
 			Destroy (gameObject);
 			ScoreManager.ScoreValue += 125;
 		}
 		else if (transform.position.z >= -16.25 || transform.position.z <= -16.5)
 		{
+			audioSource.Play ();
 			Destroy (gameObject);
 			ScoreManager.ScoreValue += 250;
 		}
 		else
 		{
+			audioSource.Play ();
 			Destroy (gameObject);
 			ScoreManager.ScoreValue += 500;
 		}	

@@ -7,21 +7,22 @@ public class MountainGamePlayManager : MonoBehaviour {
 	public GameObject panelResult;
 
 	public GameObject GoldcoinPrefabs;
-	// Use this for initialization
-	void Start () {
+    public GameObject TimeUpPrefabs;
+    // Use this for initialization
+    void Start () {
 		panelResult.SetActive(false);
-		InvokeRepeating("generateObstacle",2.0f,2.0f);
+		InvokeRepeating("generateObstacle",0.5f,0.5f);
 		InvokeRepeating("generateGoldMedal",2.0f,2.0f);
-	}
+        InvokeRepeating("generateTimeUp", 20.0f, 20.0f);
+        
+    }
 
 	void generateObstacle()
 	{
 		float xRandom = Random.Range(-4.2f,4.2f);
-
-		GameObject cloneRock = Instantiate( RockPrefabs[0],
-			new Vector3(xRandom, 0.5f ,30),
-			Quaternion.identity) as GameObject;
-		Destroy(cloneRock,30.0f);
+        GameObject rock = RockPrefabs[Random.Range(0, RockPrefabs.Length)];
+        Instantiate (rock, new Vector3(xRandom, 0.5f ,30),Quaternion.identity) ;
+		//Destroy(clonerock,30.0f);
 	}
 
 	void generateGoldMedal()
@@ -33,9 +34,17 @@ public class MountainGamePlayManager : MonoBehaviour {
 			Quaternion.identity) as GameObject;
 		Destroy(cloneGoldenMedal,30.0f);
 	}
+    void generateTimeUp()
+    {
+        float xRandom = Random.Range(-4.2f, 4.2f);
 
-	
-	float timeTemp = 10;
+        GameObject cloneTimeUp = Instantiate(TimeUpPrefabs,
+            new Vector3(xRandom, 0.5f, 30),
+            Quaternion.identity) as GameObject;
+        Destroy(cloneTimeUp, 30.0f);
+    }
+
+    public float timeTemp = 30;
 	// Update is called once per frame
 	void Update () {
 

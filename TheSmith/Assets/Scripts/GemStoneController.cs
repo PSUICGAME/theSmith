@@ -8,9 +8,13 @@ public class GemStoneController : MonoBehaviour
 	static int dif;
 
 	float speedx = 9.89f;
-
+	AudioSource audioSource;
+	public AudioClip audioClip;
+	ParticleSystem particleSys;
 	void Start()
 	{
+		particleSys = GetComponent<ParticleSystem> ();
+		audioSource = GetComponent<AudioSource> ();
 		dif = PlayerPrefs.GetInt ("Dif");
 
 		if (dif == 0) 
@@ -50,6 +54,7 @@ public class GemStoneController : MonoBehaviour
 
 	void OnMouseDown()
 	{
+		audioSource.Play ();
 		dragging = true;
 		distance = Vector3.Distance(transform.position, Camera.main.transform.position);
 	}
@@ -59,8 +64,12 @@ public class GemStoneController : MonoBehaviour
 	}
 	void OnCollisionEnter2D(Collision2D hitObject)
 	{
+		audioSource.clip = audioClip;
 		if( hitObject.gameObject.tag == "ItemBox" )
 			{
+
+			particleSys.Stop ();
+				audioSource.Play();
 			speedx = 0;	
 			ScoreManager.ScoreValue += 150;
 			}

@@ -14,7 +14,25 @@ public class GameResultManager : MonoBehaviour
 
 	public void Retry()
 	{
-		SceneManager.LoadScene ("RiverGame");
+		if (stage == 0) 
+		{
+			SceneManager.LoadScene ("ForestGame");
+		}
+
+		else if (stage == 1) 
+		{
+			SceneManager.LoadScene ("CaveGame");
+		}
+
+		else if (stage == 2) 
+		{
+			SceneManager.LoadScene ("RiverGame");
+		}
+
+		else
+		{
+			SceneManager.LoadScene ("MoutainGame");
+		}
 	}
 	public void MainMenu()
 	{
@@ -25,12 +43,77 @@ public class GameResultManager : MonoBehaviour
 	{
 		dif = PlayerPrefs.GetInt ("Dif");
 		stage = PlayerPrefs.GetInt ("Stage");
-		audioSource.Stop ();
 	}
 
 	void Update()
 	{
-		if (stage == 1) {
+		if (stage == 0) {
+			if (dif == 0) {
+				if (ScoreManager.ScoreValue >= 11000) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+
+					starValueEasy = 3;
+					PlayerPrefs.SetInt ("starValueEasyForest", starValueEasy);
+				} else if (ScoreManager.ScoreValue >= 9500) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					starValueEasy = 2;
+					PlayerPrefs.SetInt ("starValueEasyForest", starValueEasy);
+				} else if (ScoreManager.ScoreValue >= 8000) {
+					star1.sprite = conStar;
+					starValueEasy = 1;
+					PlayerPrefs.SetInt ("starValueEasyForest", starValueEasy);
+				} else {
+					starValueEasy = 0;
+					PlayerPrefs.SetInt ("starValueEasyForest", starValueEasy);
+				}
+			} else if (dif == 1) {
+				if (ScoreManager.ScoreValue >= 9500) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+
+					starValueNormal = 3;
+					PlayerPrefs.SetInt ("starValueNormalForest", starValueNormal);
+				} else if (ScoreManager.ScoreValue >= 8000) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					starValueNormal = 2;
+					PlayerPrefs.SetInt ("starValueNormalForest", starValueNormal);
+				} else if (ScoreManager.ScoreValue >= 6500) {
+					star1.sprite = conStar;
+					starValueNormal = 1;
+					PlayerPrefs.SetInt ("starValueNormalForest", starValueNormal);
+				} else {
+					starValueNormal = 0;
+					PlayerPrefs.SetInt ("starValueNormalForest", starValueNormal);
+				}
+			} else {
+				if (ScoreManager.ScoreValue >= 8000) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					star3.sprite = conStar;
+
+					starValueHard = 3;
+					PlayerPrefs.SetInt ("starValueHardForest", starValueHard);
+				} else if (ScoreManager.ScoreValue >= 6500) {
+					star1.sprite = conStar;
+					star2.sprite = conStar;
+					starValueHard = 2;
+					PlayerPrefs.SetInt ("starValueHardForest", starValueHard);
+				} else if (ScoreManager.ScoreValue >= 4000) {
+					star1.sprite = conStar;
+					starValueHard = 1;
+					PlayerPrefs.SetInt ("starValueHardForest", starValueHard);
+				} else {
+					starValueHard = 0;
+					PlayerPrefs.SetInt ("starValueHardForest", starValueHard);
+				}
+			}
+		}
+		else if (stage == 1) {
 			if (dif == 0) {
 				if (ScoreManager.ScoreValue >= 4750) {
 					star1.sprite = conStar;
